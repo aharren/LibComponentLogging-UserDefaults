@@ -6,12 +6,27 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXFileReference section */
+		E0F493F311176EEA00F3F1A6 /* lcl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lcl.h; path = Core/lcl.h; sourceTree = "<group>"; };
+		E0F493F411176EEA00F3F1A6 /* lcl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = lcl.m; path = Core/lcl.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		29B97314FDCFA39411CA2CEA /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
+				E0F493F211176EDA00F3F1A6 /* Core */,
 			);
 			name = UserDefaults;
+			sourceTree = "<group>";
+		};
+		E0F493F211176EDA00F3F1A6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E0F493F311176EEA00F3F1A6 /* lcl.h */,
+				E0F493F411176EEA00F3F1A6 /* lcl.m */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
