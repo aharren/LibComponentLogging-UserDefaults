@@ -2,7 +2,7 @@
 
 # LibComponentLogging-UserDefaults
 
-[http://0xc0.de/LibComponentLogging](http://0xc0.de/LibComponentLogging)
+[http://0xc0.de/LibComponentLogging](http://0xc0.de/LibComponentLogging)    
 [http://github.com/aharren/LibComponentLogging-UserDefaults](http://github.com/aharren/LibComponentLogging-UserDefaults)
 
 
@@ -24,17 +24,11 @@ application's main.m file:
     #include "LCLUserDefaults.h"
     
     int main(int argc, char *argv[]) {
-    
         // restore the log level settings from the standard user defaults
         [LCLUserDefaults restoreLogLevelSettingsFromStandardUserDefaults];
         
         // start your application
         ...
-        
-        // store the active log level settings to the standard user defaults
-        [LCLUserDefaults storeLogLevelSettingsToStandardUserDefaults];
-    
-        return rc;
     }
 
 
