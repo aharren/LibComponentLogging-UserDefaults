@@ -23,11 +23,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "lcl.h"
+#import "LCLUserDefaults.h"
 #import <SenTestingKit/SenTestingKit.h>
 
 
 @interface UserDefaultsTestsLogLevelSettingsTests : SenTestCase {
-
+    
 }
 
 @end
@@ -36,6 +38,65 @@
 @implementation UserDefaultsTestsLogLevelSettingsTests
 
 - (void)setUp {
+}
+
+- (void)testLogLevelSettingsStoreAndRestoreWithStandardUserDefaults {
+    // reset the log levels
+    lcl_configure_by_name("*", lcl_vOff);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)0, nil);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)0, nil);
+    
+    // set some log levels
+    lcl_configure_by_component(lcl_cComponent1, lcl_vInfo);
+    lcl_configure_by_component(lcl_cComponent2, lcl_vError);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)lcl_vInfo, nil);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)lcl_vError, nil);
+    
+    // store the log level settings to the standard user defaults
+    [LCLUserDefaults storeLogLevelSettingsToStandardUserDefaults];
+    
+    // reset the log levels
+    lcl_configure_by_name("*", lcl_vOff);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)0, nil);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)0, nil);
+    
+    // restore the log level settings from the standard user defaults
+    [LCLUserDefaults restoreLogLevelSettingsFromStandardUserDefaults];
+    
+    // check log levels
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)lcl_vInfo, nil);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)lcl_vError, nil);
+}
+
+- (void)testLogLevelSettingsStoreAndRestoreWithStandardUserDefaultsAndSynchronize {
+    // reset the log levels
+    lcl_configure_by_name("*", lcl_vOff);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)0, nil);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)0, nil);
+    
+    // set some log levels
+    lcl_configure_by_component(lcl_cComponent1, lcl_vTrace);
+    lcl_configure_by_component(lcl_cComponent2, lcl_vDebug);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)lcl_vTrace, nil);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)lcl_vDebug, nil);
+    
+    // store the log level settings to the standard user defaults and synchronize
+    [LCLUserDefaults storeLogLevelSettingsToStandardUserDefaultsAndSynchronize];
+    
+    // reset the standard user defaults
+    [NSUserDefaults resetStandardUserDefaults];
+    
+    // reset the log levels
+    lcl_configure_by_name("*", lcl_vOff);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)0, nil);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)0, nil);
+    
+    // restore the log level settings from the standard user defaults
+    [LCLUserDefaults restoreLogLevelSettingsFromStandardUserDefaults];
+    
+    // check log levels
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)lcl_vTrace, nil);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)lcl_vDebug, nil);
 }
 
 @end
