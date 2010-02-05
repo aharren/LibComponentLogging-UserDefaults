@@ -8,6 +8,8 @@
 
 /* Begin PBXFileReference section */
 		E0D241F4111C2E2600CEEE1A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = SOURCE_ROOT; };
+		E0D241F6111C2E4C00CEEE1A /* LCLUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCLUserDefaults.h; path = ../LCLUserDefaults.h; sourceTree = SOURCE_ROOT; };
+		E0D241F7111C2E4C00CEEE1A /* LCLUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCLUserDefaults.m; path = ../LCLUserDefaults.m; sourceTree = SOURCE_ROOT; };
 		E0F493F311176EEA00F3F1A6 /* lcl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lcl.h; path = Core/lcl.h; sourceTree = "<group>"; };
 		E0F493F411176EEA00F3F1A6 /* lcl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = lcl.m; path = Core/lcl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -18,6 +20,16 @@
 			children = (
 				E0D241F4111C2E2600CEEE1A /* README.md */,
 				E0F493F211176EDA00F3F1A6 /* Core */,
+				E0D241F5111C2E3F00CEEE1A /* UserDefaults */,
+			);
+			name = UserDefaults;
+			sourceTree = "<group>";
+		};
+		E0D241F5111C2E3F00CEEE1A /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				E0D241F6111C2E4C00CEEE1A /* LCLUserDefaults.h */,
+				E0D241F7111C2E4C00CEEE1A /* LCLUserDefaults.m */,
 			);
 			name = UserDefaults;
 			sourceTree = "<group>";
