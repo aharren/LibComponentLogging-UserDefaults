@@ -36,6 +36,21 @@
 //
 // Currently, LCLUserDefaults can only store/restore active log level settings.
 //
+// LCLUserDefaults uses the following format for storing log level settings
+// in your application's domain:
+//
+//   "logging:<bundle identifier>:<log component name>:level" = <integer>
+//
+// Examples:
+//
+//   "logging:com.yourcompany.YourApplication:Application/Component 1:level" = 5
+//   "logging:com.yourcompany.YourApplication:Application/Component 2:level" = 3
+//
+// You can change the log level settings from the command line by using the
+// 'defaults' command, e.g.
+//
+//   defaults write <application> 'logging:com.yourcompany.YourApplication:Application/Component 1:level' -int 2
+//
 
 
 #import <Foundation/Foundation.h>
