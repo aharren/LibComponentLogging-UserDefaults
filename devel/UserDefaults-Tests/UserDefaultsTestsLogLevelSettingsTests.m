@@ -45,6 +45,11 @@
 
 - (void)setUp {
     [self clearStandardUserDefaults];
+    
+    // reset the log levels
+    lcl_configure_by_name("*", lcl_vOff);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)0, nil);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)0, nil);
 }
 
 - (void)tearDown {
@@ -53,11 +58,6 @@
 }
 
 - (void)testLogLevelSettingsStoreAndRestoreWithStandardUserDefaults {
-    // reset the log levels
-    lcl_configure_by_name("*", lcl_vOff);
-    STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)0, nil);
-    STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)0, nil);
-    
     // set some log levels
     lcl_configure_by_component(lcl_cComponent1, lcl_vInfo);
     lcl_configure_by_component(lcl_cComponent2, lcl_vError);
@@ -81,11 +81,6 @@
 }
 
 - (void)testLogLevelSettingsStoreAndRestoreWithStandardUserDefaultsAndSynchronize {
-    // reset the log levels
-    lcl_configure_by_name("*", lcl_vOff);
-    STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)0, nil);
-    STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)0, nil);
-    
     // set some log levels
     lcl_configure_by_component(lcl_cComponent1, lcl_vTrace);
     lcl_configure_by_component(lcl_cComponent2, lcl_vDebug);
