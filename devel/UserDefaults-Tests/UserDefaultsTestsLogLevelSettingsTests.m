@@ -37,7 +37,19 @@
 
 @implementation UserDefaultsTestsLogLevelSettingsTests
 
+- (void)clearStandardUserDefaults {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:@"logging:com.yourcompany.YourApplication:Application/Component 1:level"];
+    [defaults removeObjectForKey:@"logging:com.yourcompany.YourApplication:Application/Component 2:level"];
+}
+
 - (void)setUp {
+    [self clearStandardUserDefaults];
+}
+
+- (void)tearDown {
+    [self clearStandardUserDefaults];
+    [NSUserDefaults resetStandardUserDefaults];
 }
 
 - (void)testLogLevelSettingsStoreAndRestoreWithStandardUserDefaults {
