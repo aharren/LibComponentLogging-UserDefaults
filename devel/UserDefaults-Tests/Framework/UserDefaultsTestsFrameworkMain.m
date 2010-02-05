@@ -1,6 +1,6 @@
 //
 //
-// LCLUserDefaultsConfig.h
+// UserDefaultsTestsFrameworkMain.m
 //
 //
 // Copyright (c) 2009-2010 Arne Harren <ah@0xc0.de>
@@ -23,14 +23,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "lcl.h"
+#import "LCLUserDefaults.h"
+#import "UserDefaultsTestsFrameworkMain.h"
 
-// rename the LCLUserDefaults class
-#ifdef USERDEFAULTS_TESTS_FRAMEWORK_BUILD
-#define LCLUserDefaults UDTestsFrameworkLCLUserDefaults
-#else
-#define LCLUserDefaults UDTestsLCLUserDefaults
-#endif
 
-// use default configuration settings from the packaged template file
-#import "LCLUserDefaultsConfig.template.h"
+@implementation UserDefaultsTestsFrameworkMain
+
++ (void)setLogLevelsAndStoreToStandardUserDefaults {
+    // set some log levels
+    lcl_configure_by_component(lcl_cComponent1, lcl_vDebug);
+    lcl_configure_by_component(lcl_cComponent2, lcl_vTrace);
+    
+    // store the log level settings to the standard user defaults
+    [LCLUserDefaults storeLogLevelSettingsToStandardUserDefaults];
+}
+
+@end
 

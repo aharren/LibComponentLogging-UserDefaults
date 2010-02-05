@@ -1,6 +1,6 @@
 //
 //
-// LCLUserDefaultsConfig.h
+// UserDefaultsTestsFrameworkMain.h
 //
 //
 // Copyright (c) 2009-2010 Arne Harren <ah@0xc0.de>
@@ -24,13 +24,11 @@
 // THE SOFTWARE.
 
 
-// rename the LCLUserDefaults class
-#ifdef USERDEFAULTS_TESTS_FRAMEWORK_BUILD
-#define LCLUserDefaults UDTestsFrameworkLCLUserDefaults
-#else
-#define LCLUserDefaults UDTestsLCLUserDefaults
-#endif
+@interface UserDefaultsTestsFrameworkMain : NSObject {
+    
+}
 
-// use default configuration settings from the packaged template file
-#import "LCLUserDefaultsConfig.template.h"
++ (void)setLogLevelsAndStoreToStandardUserDefaults;
+
+@end
 

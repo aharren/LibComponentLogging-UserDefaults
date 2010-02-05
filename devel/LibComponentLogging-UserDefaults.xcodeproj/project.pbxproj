@@ -12,6 +12,12 @@
 		E0D24248111C319B00CEEE1A /* UserDefaultsTestsLogLevelSettingsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D241F8111C2FC600CEEE1A /* UserDefaultsTestsLogLevelSettingsTests.m */; };
 		E0D24269111C320E00CEEE1A /* lcl.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F493F411176EEA00F3F1A6 /* lcl.m */; };
 		E0D2426A111C320E00CEEE1A /* LCLUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D241F7111C2E4C00CEEE1A /* LCLUserDefaults.m */; };
+		E0D2443B111C768000CEEE1A /* lcl.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F493F411176EEA00F3F1A6 /* lcl.m */; };
+		E0D2443C111C768000CEEE1A /* LCLUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D241F7111C2E4C00CEEE1A /* LCLUserDefaults.m */; };
+		E0D24445111C76EE00CEEE1A /* UserDefaultsTestsFrameworkMain.h in Headers */ = {isa = PBXBuildFile; fileRef = E0D24443111C76EE00CEEE1A /* UserDefaultsTestsFrameworkMain.h */; };
+		E0D24446111C76EE00CEEE1A /* UserDefaultsTestsFrameworkMain.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D24444111C76EE00CEEE1A /* UserDefaultsTestsFrameworkMain.m */; };
+		E0D2444C111C779800CEEE1A /* UserDefaultsTestsFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D2444B111C779800CEEE1A /* UserDefaultsTestsFrameworkTests.m */; };
+		E0D24452111C784800CEEE1A /* UserDefaults-Tests-Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D24423111C75F500CEEE1A /* UserDefaults-Tests-Framework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,6 +27,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = E0D2421E111C302D00CEEE1A /* UserDefaults-Tests-MacOSX-10.5 */;
 			remoteInfo = "UserDefaults-Tests-MacOSX-10.5";
+		};
+		E0D24428111C760400CEEE1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0D24422111C75F500CEEE1A /* UserDefaults-Tests-Framework */;
+			remoteInfo = "UserDefaults-Tests-Framework";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -36,6 +49,12 @@
 		E0D24271111C320E00CEEE1A /* UserDefaults-Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UserDefaults-Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D2432C111C3BE400CEEE1A /* LCLUserDefaultsConfig.template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCLUserDefaultsConfig.template.h; path = ../LCLUserDefaultsConfig.template.h; sourceTree = SOURCE_ROOT; };
 		E0D2433E111C3C2E00CEEE1A /* LCLUserDefaultsConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCLUserDefaultsConfig.h; path = "UserDefaults-Tests/LCLUserDefaultsConfig.h"; sourceTree = "<group>"; };
+		E0D24423111C75F500CEEE1A /* UserDefaults-Tests-Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "UserDefaults-Tests-Framework.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0D24439111C763D00CEEE1A /* UserDefaults-Tests-Framework-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "UserDefaults-Tests-Framework-Info.plist"; path = "UserDefaults-Tests/Framework/UserDefaults-Tests-Framework-Info.plist"; sourceTree = "<group>"; };
+		E0D24442111C76C100CEEE1A /* UserDefaultsTestsFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDefaultsTestsFramework.h; path = "UserDefaults-Tests/Framework/UserDefaultsTestsFramework.h"; sourceTree = "<group>"; };
+		E0D24443111C76EE00CEEE1A /* UserDefaultsTestsFrameworkMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDefaultsTestsFrameworkMain.h; path = "UserDefaults-Tests/Framework/UserDefaultsTestsFrameworkMain.h"; sourceTree = "<group>"; };
+		E0D24444111C76EE00CEEE1A /* UserDefaultsTestsFrameworkMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDefaultsTestsFrameworkMain.m; path = "UserDefaults-Tests/Framework/UserDefaultsTestsFrameworkMain.m"; sourceTree = "<group>"; };
+		E0D2444B111C779800CEEE1A /* UserDefaultsTestsFrameworkTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDefaultsTestsFrameworkTests.m; path = "UserDefaults-Tests/UserDefaultsTestsFrameworkTests.m"; sourceTree = "<group>"; };
 		E0F493F311176EEA00F3F1A6 /* lcl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lcl.h; path = Core/lcl.h; sourceTree = "<group>"; };
 		E0F493F411176EEA00F3F1A6 /* lcl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = lcl.m; path = Core/lcl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,10 +64,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0D24452111C784800CEEE1A /* UserDefaults-Tests-Framework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E0D2426C111C320E00CEEE1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0D24421111C75F500CEEE1A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -67,6 +94,7 @@
 				E0D241F9111C2FCB00CEEE1A /* UserDefaults-Tests */,
 				E0D2421F111C302D00CEEE1A /* UserDefaults-Tests-MacOSX-10.5.octest */,
 				E0D24271111C320E00CEEE1A /* UserDefaults-Tests.octest */,
+				E0D24423111C75F500CEEE1A /* UserDefaults-Tests-Framework.framework */,
 			);
 			name = UserDefaults;
 			sourceTree = "<group>";
@@ -89,8 +117,21 @@
 				E0D2433E111C3C2E00CEEE1A /* LCLUserDefaultsConfig.h */,
 				E0D2422E111C30B600CEEE1A /* UserDefaults-Tests-Info.plist */,
 				E0D241F8111C2FC600CEEE1A /* UserDefaultsTestsLogLevelSettingsTests.m */,
+				E0D2441D111C75DE00CEEE1A /* Framework */,
+				E0D2444B111C779800CEEE1A /* UserDefaultsTestsFrameworkTests.m */,
 			);
 			name = "UserDefaults-Tests";
+			sourceTree = "<group>";
+		};
+		E0D2441D111C75DE00CEEE1A /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				E0D24439111C763D00CEEE1A /* UserDefaults-Tests-Framework-Info.plist */,
+				E0D24442111C76C100CEEE1A /* UserDefaultsTestsFramework.h */,
+				E0D24443111C76EE00CEEE1A /* UserDefaultsTestsFrameworkMain.h */,
+				E0D24444111C76EE00CEEE1A /* UserDefaultsTestsFrameworkMain.m */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 		E0F493F211176EDA00F3F1A6 /* Core */ = {
@@ -103,6 +144,17 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E0D2441E111C75F500CEEE1A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0D24445111C76EE00CEEE1A /* UserDefaultsTestsFrameworkMain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		E0D2421E111C302D00CEEE1A /* UserDefaults-Tests-MacOSX-10.5 */ = {
@@ -117,6 +169,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E0D24429111C760400CEEE1A /* PBXTargetDependency */,
 			);
 			name = "UserDefaults-Tests-MacOSX-10.5";
 			productName = "UserDefaults-Tests-MacOSX-10.5";
@@ -142,6 +195,24 @@
 			productReference = E0D24271111C320E00CEEE1A /* UserDefaults-Tests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		E0D24422111C75F500CEEE1A /* UserDefaults-Tests-Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0D24427111C75F600CEEE1A /* Build configuration list for PBXNativeTarget "UserDefaults-Tests-Framework" */;
+			buildPhases = (
+				E0D2441E111C75F500CEEE1A /* Headers */,
+				E0D2441F111C75F500CEEE1A /* Resources */,
+				E0D24420111C75F500CEEE1A /* Sources */,
+				E0D24421111C75F500CEEE1A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UserDefaults-Tests-Framework";
+			productName = "UserDefaults-Tests-Framework";
+			productReference = E0D24423111C75F500CEEE1A /* UserDefaults-Tests-Framework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -157,6 +228,7 @@
 			targets = (
 				E0D24266111C320E00CEEE1A /* UserDefaults-Tests */,
 				E0D2421E111C302D00CEEE1A /* UserDefaults-Tests-MacOSX-10.5 */,
+				E0D24422111C75F500CEEE1A /* UserDefaults-Tests-Framework */,
 			);
 		};
 /* End PBXProject section */
@@ -170,6 +242,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E0D24267111C320E00CEEE1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0D2441F111C75F500CEEE1A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -215,6 +294,7 @@
 				E0D24235111C30D000CEEE1A /* lcl.m in Sources */,
 				E0D24238111C30D300CEEE1A /* LCLUserDefaults.m in Sources */,
 				E0D24248111C319B00CEEE1A /* UserDefaultsTestsLogLevelSettingsTests.m in Sources */,
+				E0D2444C111C779800CEEE1A /* UserDefaultsTestsFrameworkTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +307,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E0D24420111C75F500CEEE1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0D2443B111C768000CEEE1A /* lcl.m in Sources */,
+				E0D2443C111C768000CEEE1A /* LCLUserDefaults.m in Sources */,
+				E0D24446111C76EE00CEEE1A /* UserDefaultsTestsFrameworkMain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -234,6 +324,11 @@
 			isa = PBXTargetDependency;
 			target = E0D2421E111C302D00CEEE1A /* UserDefaults-Tests-MacOSX-10.5 */;
 			targetProxy = E0D24273111C322700CEEE1A /* PBXContainerItemProxy */;
+		};
+		E0D24429111C760400CEEE1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0D24422111C75F500CEEE1A /* UserDefaults-Tests-Framework */;
+			targetProxy = E0D24428111C760400CEEE1A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -396,6 +491,70 @@
 			};
 			name = Release;
 		};
+		E0D24425111C75F600CEEE1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					i386,
+					x86_64,
+					ppc,
+				);
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = USERDEFAULTS_TESTS_FRAMEWORK_BUILD;
+				INFOPLIST_FILE = "UserDefaults-Tests/Framework/UserDefaults-Tests-Framework-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "UserDefaults-Tests-Framework";
+			};
+			name = Debug;
+		};
+		E0D24426111C75F600CEEE1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					i386,
+					x86_64,
+					ppc,
+				);
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = USERDEFAULTS_TESTS_FRAMEWORK_BUILD;
+				INFOPLIST_FILE = "UserDefaults-Tests/Framework/UserDefaults-Tests-Framework-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "UserDefaults-Tests-Framework";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -422,6 +581,15 @@
 			buildConfigurations = (
 				E0D2426F111C320E00CEEE1A /* Debug */,
 				E0D24270111C320E00CEEE1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0D24427111C75F600CEEE1A /* Build configuration list for PBXNativeTarget "UserDefaults-Tests-Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0D24425111C75F600CEEE1A /* Debug */,
+				E0D24426111C75F600CEEE1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

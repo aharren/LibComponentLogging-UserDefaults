@@ -1,6 +1,6 @@
 //
 //
-// LCLUserDefaultsConfig.h
+// UserDefaultsTestsFramework.h
 //
 //
 // Copyright (c) 2009-2010 Arne Harren <ah@0xc0.de>
@@ -23,14 +23,5 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
-// rename the LCLUserDefaults class
-#ifdef USERDEFAULTS_TESTS_FRAMEWORK_BUILD
-#define LCLUserDefaults UDTestsFrameworkLCLUserDefaults
-#else
-#define LCLUserDefaults UDTestsLCLUserDefaults
-#endif
-
-// use default configuration settings from the packaged template file
-#import "LCLUserDefaultsConfig.template.h"
+#import "UserDefaultsTestsFrameworkMain.h"
 
