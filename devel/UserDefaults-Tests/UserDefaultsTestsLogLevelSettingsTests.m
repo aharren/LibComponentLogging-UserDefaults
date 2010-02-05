@@ -41,6 +41,8 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults removeObjectForKey:@"logging:com.yourcompany.YourApplication:Application/Component 1:level"];
     [defaults removeObjectForKey:@"logging:com.yourcompany.YourApplication:Application/Component 2:level"];
+    [defaults synchronize];
+    [NSUserDefaults resetStandardUserDefaults];
 }
 
 - (void)setUp {
@@ -54,7 +56,6 @@
 
 - (void)tearDown {
     [self clearStandardUserDefaults];
-    [NSUserDefaults resetStandardUserDefaults];
 }
 
 - (void)testLogLevelSettingsStoreAndRestoreWithStandardUserDefaults {
@@ -124,6 +125,27 @@
     // check log levels
     STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)lcl_vTrace, nil);
     STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)lcl_vDebug, nil);
+}
+
+- (void)testLogLevelSettingsDefaultsWriteAndRestoreWithStandardUserDefaults {
+    // change log levels via shell command
+    NSString *command1 = [NSString stringWithFormat:@"defaults write \"%@\" \"%@\" -int %d",
+                          [[[NSBundle mainBundle] executablePath] lastPathComponent],
+                          @"logging:com.yourcompany.YourApplication:Application/Component 1:level",
+                          2];
+    system([command1 cStringUsingEncoding:NSUTF8StringEncoding]);
+    NSString *command2 = [NSString stringWithFormat:@"defaults write \"%@\" \"%@\" -int %d",
+                          [[[NSBundle mainBundle] executablePath] lastPathComponent],
+                          @"logging:com.yourcompany.YourApplication:Application/Component 2:level",
+                          1];
+    system([command2 cStringUsingEncoding:NSUTF8StringEncoding]);
+    
+    // restore the log level settings from the standard user defaults
+    [LCLUserDefaults restoreLogLevelSettingsFromStandardUserDefaults];
+    
+    // check log levels
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)lcl_vError, nil);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)lcl_vCritical, nil);
 }
 
 @end
