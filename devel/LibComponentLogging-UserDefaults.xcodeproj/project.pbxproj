@@ -34,6 +34,8 @@
 		E0D24240111C311100CEEE1A /* lcl_config_logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lcl_config_logger.h; path = "UserDefaults-Tests/lcl_config_logger.h"; sourceTree = "<group>"; };
 		E0D24241111C311C00CEEE1A /* lcl_config_components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lcl_config_components.h; path = "UserDefaults-Tests/lcl_config_components.h"; sourceTree = "<group>"; };
 		E0D24271111C320E00CEEE1A /* UserDefaults-Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UserDefaults-Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0D2432C111C3BE400CEEE1A /* LCLUserDefaultsConfig.template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCLUserDefaultsConfig.template.h; path = ../LCLUserDefaultsConfig.template.h; sourceTree = SOURCE_ROOT; };
+		E0D2433E111C3C2E00CEEE1A /* LCLUserDefaultsConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCLUserDefaultsConfig.h; path = "UserDefaults-Tests/LCLUserDefaultsConfig.h"; sourceTree = "<group>"; };
 		E0F493F311176EEA00F3F1A6 /* lcl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lcl.h; path = Core/lcl.h; sourceTree = "<group>"; };
 		E0F493F411176EEA00F3F1A6 /* lcl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = lcl.m; path = Core/lcl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 			children = (
 				E0D241F6111C2E4C00CEEE1A /* LCLUserDefaults.h */,
 				E0D241F7111C2E4C00CEEE1A /* LCLUserDefaults.m */,
+				E0D2432C111C3BE400CEEE1A /* LCLUserDefaultsConfig.template.h */,
 			);
 			name = UserDefaults;
 			sourceTree = "<group>";
@@ -83,6 +86,7 @@
 			children = (
 				E0D24240111C311100CEEE1A /* lcl_config_logger.h */,
 				E0D24241111C311C00CEEE1A /* lcl_config_components.h */,
+				E0D2433E111C3C2E00CEEE1A /* LCLUserDefaultsConfig.h */,
 				E0D2422E111C30B600CEEE1A /* UserDefaults-Tests-Info.plist */,
 				E0D241F8111C2FC600CEEE1A /* UserDefaultsTestsLogLevelSettingsTests.m */,
 			);

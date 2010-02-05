@@ -39,6 +39,7 @@
 
 
 #import <Foundation/Foundation.h>
+#import "LCLUserDefaultsConfig.h"
 
 
 @interface LCLUserDefaults : NSObject {
