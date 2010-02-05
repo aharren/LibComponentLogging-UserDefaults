@@ -25,14 +25,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E0D2421E111C302D00CEEE1A /* UserDefaults-Tests-MacOSX-10.5 */;
+			remoteGlobalIDString = E0D2421E111C302D00CEEE1A;
 			remoteInfo = "UserDefaults-Tests-MacOSX-10.5";
 		};
 		E0D24428111C760400CEEE1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E0D24422111C75F500CEEE1A /* UserDefaults-Tests-Framework */;
+			remoteGlobalIDString = E0D24422111C75F500CEEE1A;
 			remoteInfo = "UserDefaults-Tests-Framework";
 		};
 /* End PBXContainerItemProxy section */
