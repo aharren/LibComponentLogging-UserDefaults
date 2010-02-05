@@ -34,7 +34,7 @@
 // LCLUserDefaults is a LibComponentLogging Core extension which stores/restores
 // settings to/from the user defaults.
 //
-// Currently, LCLUserDefaults can only store/restore active log levels settings.
+// Currently, LCLUserDefaults can only store/restore active log level settings.
 //
 
 
