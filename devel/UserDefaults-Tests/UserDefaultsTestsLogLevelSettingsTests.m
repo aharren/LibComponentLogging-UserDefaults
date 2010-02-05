@@ -58,14 +58,24 @@
 }
 
 - (void)testLogLevelSettingsStoreAndRestoreWithStandardUserDefaults {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
     // set some log levels
     lcl_configure_by_component(lcl_cComponent1, lcl_vInfo);
     lcl_configure_by_component(lcl_cComponent2, lcl_vError);
     STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)lcl_vInfo, nil);
     STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)lcl_vError, nil);
     
+    // check the standard user defaults
+    STAssertNil([defaults objectForKey:@"logging:com.yourcompany.YourApplication:Application/Component 1:level"], nil);
+    STAssertNil([defaults objectForKey:@"logging:com.yourcompany.YourApplication:Application/Component 2:level"], nil);
+    
     // store the log level settings to the standard user defaults
     [LCLUserDefaults storeLogLevelSettingsToStandardUserDefaults];
+    
+    // check the standard user defaults
+    STAssertEquals([defaults integerForKey:@"logging:com.yourcompany.YourApplication:Application/Component 1:level"], (NSInteger)lcl_vInfo, nil);
+    STAssertEquals([defaults integerForKey:@"logging:com.yourcompany.YourApplication:Application/Component 2:level"], (NSInteger)lcl_vError, nil);
     
     // reset the log levels
     lcl_configure_by_name("*", lcl_vOff);
@@ -81,14 +91,24 @@
 }
 
 - (void)testLogLevelSettingsStoreAndRestoreWithStandardUserDefaultsAndSynchronize {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
     // set some log levels
     lcl_configure_by_component(lcl_cComponent1, lcl_vTrace);
     lcl_configure_by_component(lcl_cComponent2, lcl_vDebug);
     STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)lcl_vTrace, nil);
     STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)lcl_vDebug, nil);
     
+    // check the standard user defaults
+    STAssertNil([defaults objectForKey:@"logging:com.yourcompany.YourApplication:Application/Component 1:level"], nil);
+    STAssertNil([defaults objectForKey:@"logging:com.yourcompany.YourApplication:Application/Component 2:level"], nil);
+    
     // store the log level settings to the standard user defaults and synchronize
     [LCLUserDefaults storeLogLevelSettingsToStandardUserDefaultsAndSynchronize];
+    
+    // check the standard user defaults
+    STAssertEquals([defaults integerForKey:@"logging:com.yourcompany.YourApplication:Application/Component 1:level"], (NSInteger)lcl_vTrace, nil);
+    STAssertEquals([defaults integerForKey:@"logging:com.yourcompany.YourApplication:Application/Component 2:level"], (NSInteger)lcl_vDebug, nil);
     
     // reset the standard user defaults
     [NSUserDefaults resetStandardUserDefaults];
