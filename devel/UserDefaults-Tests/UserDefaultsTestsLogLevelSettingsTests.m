@@ -148,5 +148,30 @@
     STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)lcl_vCritical, nil);
 }
 
+- (void)testLogLevelSettingsDefaultsWriteNonIntValuesAndRestoreWithStandardUserDefaults {
+    // change log levels via shell command
+    NSString *command1 = [NSString stringWithFormat:@"defaults write \"%@\" \"%@\" \"%d\"",
+                          [[[NSBundle mainBundle] executablePath] lastPathComponent],
+                          @"logging:com.yourcompany.YourApplication:Application/Component 1:level",
+                          1];
+    system([command1 cStringUsingEncoding:NSUTF8StringEncoding]);
+    NSString *command2 = [NSString stringWithFormat:@"defaults write \"%@\" \"%@\" \"BAD\"",
+                          [[[NSBundle mainBundle] executablePath] lastPathComponent],
+                          @"logging:com.yourcompany.YourApplication:Application/Component 2:level"];
+    system([command2 cStringUsingEncoding:NSUTF8StringEncoding]);
+    
+    STAssertEqualObjects([[NSUserDefaults standardUserDefaults] objectForKey:@"logging:com.yourcompany.YourApplication:Application/Component 1:level"],
+                         @"1", nil);
+    STAssertEqualObjects([[NSUserDefaults standardUserDefaults] objectForKey:@"logging:com.yourcompany.YourApplication:Application/Component 2:level"],
+                         @"BAD", nil);
+    
+    // restore the log level settings from the standard user defaults
+    [LCLUserDefaults restoreLogLevelSettingsFromStandardUserDefaults];
+    
+    // check log levels
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent1], (int)lcl_vCritical, nil);
+    STAssertEquals((int)_lcl_component_level[lcl_cComponent2], (int)lcl_vOff, nil);
+}
+
 @end
 
