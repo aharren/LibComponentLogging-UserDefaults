@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E082A205111D794F00C452AF /* lcl.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F493F411176EEA00F3F1A6 /* lcl.m */; };
+		E082A206111D794F00C452AF /* LCLUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D241F7111C2E4C00CEEE1A /* LCLUserDefaults.m */; };
 		E0967876111D77A000404FB1 /* lcl.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F493F411176EEA00F3F1A6 /* lcl.m */; };
 		E0967877111D77A000404FB1 /* LCLUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D241F7111C2E4C00CEEE1A /* LCLUserDefaults.m */; };
 		E0967878111D77A000404FB1 /* UserDefaultsTestsLogLevelSettingsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0D241F8111C2FC600CEEE1A /* UserDefaultsTestsLogLevelSettingsTests.m */; };
@@ -26,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E082A213111D799500C452AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E082A200111D794F00C452AF;
+			remoteInfo = "UserDefaults-Tests-iPhoneOS-3.0-Device";
+		};
 		E0967873111D77A000404FB1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -57,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E082A20F111D794F00C452AF /* UserDefaults-Tests-iPhoneOS-3.0-Device.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UserDefaults-Tests-iPhoneOS-3.0-Device.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0967880111D77A000404FB1 /* UserDefaults-Tests-MacOSX-10.6-ClangLLVM.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UserDefaults-Tests-MacOSX-10.6-ClangLLVM.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D241F4111C2E2600CEEE1A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = SOURCE_ROOT; };
 		E0D241F6111C2E4C00CEEE1A /* LCLUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCLUserDefaults.h; path = ../LCLUserDefaults.h; sourceTree = SOURCE_ROOT; };
@@ -80,6 +90,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E082A209111D794F00C452AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E096787A111D77A000404FB1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,6 +141,7 @@
 				E0D2421F111C302D00CEEE1A /* UserDefaults-Tests-MacOSX-10.5.octest */,
 				E0967880111D77A000404FB1 /* UserDefaults-Tests-MacOSX-10.6-ClangLLVM.octest */,
 				E0D24423111C75F500CEEE1A /* UserDefaults-Tests-Framework.framework */,
+				E082A20F111D794F00C452AF /* UserDefaults-Tests-iPhoneOS-3.0-Device.octest */,
 			);
 			name = UserDefaults;
 			sourceTree = "<group>";
@@ -186,6 +204,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		E082A200111D794F00C452AF /* UserDefaults-Tests-iPhoneOS-3.0-Device */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E082A20C111D794F00C452AF /* Build configuration list for PBXNativeTarget "UserDefaults-Tests-iPhoneOS-3.0-Device" */;
+			buildPhases = (
+				E082A203111D794F00C452AF /* Resources */,
+				E082A204111D794F00C452AF /* Sources */,
+				E082A209111D794F00C452AF /* Frameworks */,
+				E082A20B111D794F00C452AF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UserDefaults-Tests-iPhoneOS-3.0-Device";
+			productName = "UserDefaults-Tests-MacOSX-10.5";
+			productReference = E082A20F111D794F00C452AF /* UserDefaults-Tests-iPhoneOS-3.0-Device.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		E0967871111D77A000404FB1 /* UserDefaults-Tests-MacOSX-10.6-ClangLLVM */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E096787D111D77A000404FB1 /* Build configuration list for PBXNativeTarget "UserDefaults-Tests-MacOSX-10.6-ClangLLVM" */;
@@ -238,6 +274,7 @@
 			dependencies = (
 				E0D24274111C322700CEEE1A /* PBXTargetDependency */,
 				E0967892111D77F400404FB1 /* PBXTargetDependency */,
+				E082A214111D799500C452AF /* PBXTargetDependency */,
 			);
 			name = "UserDefaults-Tests";
 			productName = "UserDefaults-Tests-MacOSX-10.5";
@@ -278,12 +315,20 @@
 				E0D24266111C320E00CEEE1A /* UserDefaults-Tests */,
 				E0D2421E111C302D00CEEE1A /* UserDefaults-Tests-MacOSX-10.5 */,
 				E0967871111D77A000404FB1 /* UserDefaults-Tests-MacOSX-10.6-ClangLLVM */,
+				E082A200111D794F00C452AF /* UserDefaults-Tests-iPhoneOS-3.0-Device */,
 				E0D24422111C75F500CEEE1A /* UserDefaults-Tests-Framework */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E082A203111D794F00C452AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E0967874111D77A000404FB1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -315,6 +360,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		E082A20B111D794F00C452AF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
 		E096787C111D77A000404FB1 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,6 +415,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E082A204111D794F00C452AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E082A205111D794F00C452AF /* lcl.m in Sources */,
+				E082A206111D794F00C452AF /* LCLUserDefaults.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E0967875111D77A000404FB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,6 +468,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E082A214111D799500C452AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E082A200111D794F00C452AF /* UserDefaults-Tests-iPhoneOS-3.0-Device */;
+			targetProxy = E082A213111D799500C452AF /* PBXContainerItemProxy */;
+		};
 		E0967872111D77A000404FB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E0D24422111C75F500CEEE1A /* UserDefaults-Tests-Framework */;
@@ -447,6 +519,104 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+		E082A20D111D794F00C452AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_NONCONFORMANT_CODE_ERRORS_AS_WARNINGS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = 4.2;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_PROTOTYPE_CONVERSION = NO;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				INFOPLIST_FILE = "UserDefaults-Tests/UserDefaults-Tests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "UserDefaults-Tests-iPhoneOS-3.0-Device";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos3.0;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E082A20E111D794F00C452AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_NONCONFORMANT_CODE_ERRORS_AS_WARNINGS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = 4.2;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_PROTOTYPE_CONVERSION = NO;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				INFOPLIST_FILE = "UserDefaults-Tests/UserDefaults-Tests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "UserDefaults-Tests-iPhoneOS-3.0-Device";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos3.0;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -786,6 +956,15 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E082A20C111D794F00C452AF /* Build configuration list for PBXNativeTarget "UserDefaults-Tests-iPhoneOS-3.0-Device" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E082A20D111D794F00C452AF /* Debug */,
+				E082A20E111D794F00C452AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
