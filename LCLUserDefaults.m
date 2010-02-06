@@ -70,7 +70,7 @@
     
     // for all existing log components do ...
     for (_lcl_component_t c = _lcl_component_t_first; c <= _lcl_component_t_last; c++) {
-        NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+        NSAutoreleasePool *lpool = [[NSAutoreleasePool alloc] init];
         
         // store the log level in the user defaults
         NSString *key = [LCLUserDefaults logLevelKeyForComponent:c
@@ -78,7 +78,7 @@
         [defaults setInteger:(NSInteger)(NSUInteger)_lcl_component_level[c]
                       forKey:key];
         
-        [pool release];
+        [lpool release];
     }
     
     [pool release];
@@ -103,7 +103,7 @@
     
     // for all existing log components do ...
     for (_lcl_component_t c = _lcl_component_t_first; c <= _lcl_component_t_last; c++) {
-        NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+        NSAutoreleasePool *lpool = [[NSAutoreleasePool alloc] init];
         
         // get the log level from the user defaults
         NSString *key = [LCLUserDefaults logLevelKeyForComponent:c
@@ -118,7 +118,7 @@
         // configure the component with the log level from the user defaults
         lcl_configure_by_component((_lcl_component_t)c, (_lcl_level_t)(NSUInteger)level);
         
-        [pool release];
+        [lpool release];
     }
     
     [pool release];
