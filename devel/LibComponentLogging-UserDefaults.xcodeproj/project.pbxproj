@@ -68,6 +68,7 @@
 /* Begin PBXFileReference section */
 		E082A20F111D794F00C452AF /* UserDefaults-Tests-iPhoneOS-3.0-Device.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UserDefaults-Tests-iPhoneOS-3.0-Device.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0967880111D77A000404FB1 /* UserDefaults-Tests-MacOSX-10.6-ClangLLVM.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UserDefaults-Tests-MacOSX-10.6-ClangLLVM.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E08A4D51145B257B0012C0E1 /* lcl_config_extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lcl_config_extensions.h; path = "UserDefaults-Tests/lcl_config_extensions.h"; sourceTree = "<group>"; };
 		E0D241F4111C2E2600CEEE1A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = SOURCE_ROOT; };
 		E0D241F6111C2E4C00CEEE1A /* LCLUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCLUserDefaults.h; path = ../LCLUserDefaults.h; sourceTree = SOURCE_ROOT; };
 		E0D241F7111C2E4C00CEEE1A /* LCLUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCLUserDefaults.m; path = ../LCLUserDefaults.m; sourceTree = SOURCE_ROOT; };
@@ -161,6 +162,7 @@
 			children = (
 				E0D24240111C311100CEEE1A /* lcl_config_logger.h */,
 				E0D24241111C311C00CEEE1A /* lcl_config_components.h */,
+				E08A4D51145B257B0012C0E1 /* lcl_config_extensions.h */,
 				E0D2433E111C3C2E00CEEE1A /* LCLUserDefaultsConfig.h */,
 				E0D2422E111C30B600CEEE1A /* UserDefaults-Tests-Info.plist */,
 				E0D241F8111C2FC600CEEE1A /* UserDefaultsTestsLogLevelSettingsTests.m */,
