@@ -27,6 +27,12 @@
 #import "LCLUserDefaults.h"
 
 
+// __has_feature for non-clang compilers
+#if !defined(__has_feature)
+#define __has_feature(_feature) 0
+#endif
+
+
 // ARC/non-ARC autorelease pool
 #if __has_feature(objc_arc)
 #define _LCLUserDefaults_autoreleasepool_begin(_name)                          \
