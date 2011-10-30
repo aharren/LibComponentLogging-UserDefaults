@@ -3,7 +3,7 @@
 // LCLUserDefaults.h
 //
 //
-// Copyright (c) 2009-2010 Arne Harren <ah@0xc0.de>
+// Copyright (c) 2009-2011 Arne Harren <ah@0xc0.de>
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@
 
 #define _LCLUSERDEFAULTS_VERSION_MAJOR  1
 #define _LCLUSERDEFAULTS_VERSION_MINOR  0
-#define _LCLUSERDEFAULTS_VERSION_BUILD  1
+#define _LCLUSERDEFAULTS_VERSION_BUILD  2
 #define _LCLUSERDEFAULTS_VERSION_SUFFIX ""
 
 //
