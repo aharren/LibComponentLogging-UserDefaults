@@ -27,6 +27,20 @@
 #import "LCLUserDefaults.h"
 
 
+// ARC/non-ARC autorelease pool
+#if __has_feature(objc_arc)
+#define _LCLUserDefaults_autoreleasepool_begin(_name)                          \
+    @autoreleasepool {
+#define _LCLUserDefaults_autoreleasepool_end(_name)                            \
+    }
+#else
+#define _LCLUserDefaults_autoreleasepool_begin(_name)                          \
+    NSAutoreleasePool *_name = [[NSAutoreleasePool alloc] init];
+#define _LCLUserDefaults_autoreleasepool_end(_name)                            \
+    [_name release];
+#endif
+
+
 @implementation LCLUserDefaults
 
 
@@ -64,13 +78,13 @@
 
 // Stores the active log level settings to the given user defaults.
 + (void)storeLogLevelSettingsToUserDefaults:(NSUserDefaults *)defaults {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    _LCLUserDefaults_autoreleasepool_begin(pool)
     
     NSString *prefix = [LCLUserDefaults keyPrefix];
     
     // for all existing log components do ...
     for (_lcl_component_t c = _lcl_component_t_first; c <= _lcl_component_t_last; c++) {
-        NSAutoreleasePool *lpool = [[NSAutoreleasePool alloc] init];
+        _LCLUserDefaults_autoreleasepool_begin(lpool)
         
         // store the log level in the user defaults
         NSString *key = [LCLUserDefaults logLevelKeyForComponent:c
@@ -78,32 +92,32 @@
         [defaults setInteger:(NSInteger)(NSUInteger)_lcl_component_level[c]
                       forKey:key];
         
-        [lpool release];
+        _LCLUserDefaults_autoreleasepool_end(lpool)
     }
     
-    [pool release];
+    _LCLUserDefaults_autoreleasepool_end(pool)
 }
 
 // Stores the active log level settings to the given user defaults and
 // synchronizes the user defaults.
 + (void)storeLogLevelSettingsToUserDefaultsAndSynchronize:(NSUserDefaults *)defaults {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    _LCLUserDefaults_autoreleasepool_begin(pool)
     
     [LCLUserDefaults storeLogLevelSettingsToUserDefaults:defaults];
     [defaults synchronize];
     
-    [pool release];
+    _LCLUserDefaults_autoreleasepool_end(pool)
 }
 
 // Restores the active log level settings from the given user defaults.
 + (void)restoreLogLevelSettingsFromUserDefaults:(NSUserDefaults *)defaults {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    _LCLUserDefaults_autoreleasepool_begin(pool)
     
     NSString *prefix = [LCLUserDefaults keyPrefix];
     
     // for all existing log components do ...
     for (_lcl_component_t c = _lcl_component_t_first; c <= _lcl_component_t_last; c++) {
-        NSAutoreleasePool *lpool = [[NSAutoreleasePool alloc] init];
+        _LCLUserDefaults_autoreleasepool_begin(lpool)
         
         // get the log level from the user defaults
         NSString *key = [LCLUserDefaults logLevelKeyForComponent:c
@@ -118,10 +132,10 @@
         // configure the component with the log level from the user defaults
         lcl_configure_by_component((_lcl_component_t)c, (_lcl_level_t)(NSUInteger)level);
         
-        [lpool release];
+        _LCLUserDefaults_autoreleasepool_end(lpool)
     }
     
-    [pool release];
+    _LCLUserDefaults_autoreleasepool_end(pool)
 }
 
 
